@@ -43,7 +43,7 @@ public class AirHockeyRender implements GLSurfaceView.Renderer {
     private int aPositionLocation;
 
     public AirHockeyRender(Context context) {
-        float[] tableVerticesWithTriangles = {
+        /*float[] tableVerticesWithTriangles = {
                 // Triangle 1
                 0f, 0f,
                 9f, 14f,
@@ -63,8 +63,8 @@ public class AirHockeyRender implements GLSurfaceView.Renderer {
                 4.5f, 12f
 
         };
-
-        /*float[] tableVerticesWithTriangles = {
+*/
+        float[] tableVerticesWithTriangles = {
                 // Triangle 1
                 -0.5f, -0.5f,
                 0.5f, 0.5f,
@@ -78,8 +78,21 @@ public class AirHockeyRender implements GLSurfaceView.Renderer {
                 0.5f, 0f,
                 // Mallets
                 0f, -0.25f,
-                0f, 0.25f
-        };*/
+                0f, 0.25f,
+
+                -0.4f, -0.4f,
+                -0.4f, 0.4f,
+
+                -0.4f, 0.4f,
+                0.4f, 0.4f,
+
+                0.4f, 0.4f,
+                0.4f,-0.4f,
+
+                0.4f,-0.4f,
+                -0.4f,-0.4f,
+
+        };
 
         vertexData = ByteBuffer.allocateDirect(tableVerticesWithTriangles.length * BYTES_PER_FLOAT)
                 .order(ByteOrder.nativeOrder())
@@ -139,5 +152,14 @@ public class AirHockeyRender implements GLSurfaceView.Renderer {
         // Draw the second mallet red.
         glUniform4f(uColorLocation, 1.0f, 0.0f, 0.0f, 1.0f);
         glDrawArrays(GL_POINTS, 9, 1);
+
+        glUniform4f(uColorLocation,0.0f,1.0f,0.0f,1.0f);
+        glDrawArrays(GL_LINES,10,2);
+        glUniform4f(uColorLocation,0.0f,1.0f,0.0f,1.0f);
+        glDrawArrays(GL_LINES,12,2);
+        glUniform4f(uColorLocation,0.0f,1.0f,0.0f,1.0f);
+        glDrawArrays(GL_LINES,14,2);
+        glUniform4f(uColorLocation,0.0f,1.0f,0.0f,1.0f);
+        glDrawArrays(GL_LINES,16,2);
     }
 }
