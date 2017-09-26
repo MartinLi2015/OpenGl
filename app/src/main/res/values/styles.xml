@@ -8,4 +8,31 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+
+    <style name="header">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">@dimen/height_title_bar</item>
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+
+    <style name="header_back">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:src">@mipmap/titlebar_back</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_marginLeft">8dp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="header_title">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_centerInParent">true</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:typeface">normal</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
 </resources>

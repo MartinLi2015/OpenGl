@@ -15,9 +15,18 @@ buildscript {
 allprojects {
     repositories {
         jcenter()
+        maven { url "https://jitpack.io" }
     }
 }
 
 task clean(type: Delete) {
     delete rootProject.buildDir
+}
+
+
+ext {
+    BaseRecyclerViewAdapterHelperVersion = '2.8.0'
+    eventBusVersion = '3.0.0'
+    UILVersion = '1.9.5'
+    GlideVersion = '4.0.0-RC0'
 }
