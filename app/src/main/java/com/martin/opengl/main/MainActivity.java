@@ -10,6 +10,7 @@ import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.chad.library.adapter.base.listener.OnItemClickListener;
 import com.martin.opengl.R;
+import com.martin.opengl.airHockeyortho.AirHockeyActivityOrtho;
 import com.martin.opengl.airhockey1.AirHockeyActivity;
 import com.martin.opengl.airhockey2.AirHockeyActivity2;
 import com.martin.opengl.base.AppTitleBaseFragmentActivity;
@@ -74,6 +75,11 @@ public class MainActivity extends AppTitleBaseFragmentActivity {
         bean.title = "Adding Color and Shader";
         bean.description = "添加负责色值与阴影";
         bean.clz = AirHockeyActivity2.class;
+        list.add(bean);
+        bean = new MainActivityBean();
+        bean.title = "Adjusting to the Screen's Aspect Ratio";
+        bean.description = "调整屏幕比率";
+        bean.clz = AirHockeyActivityOrtho.class;
         list.add(bean);
         return list;
 
