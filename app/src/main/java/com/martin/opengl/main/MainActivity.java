@@ -1,6 +1,7 @@
 package com.martin.opengl.main;
 
 import android.content.Intent;
+import android.net.VpnService;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -14,6 +15,7 @@ import com.martin.opengl.airHockeyortho.AirHockeyActivityOrtho;
 import com.martin.opengl.airhockey1.AirHockeyActivity;
 import com.martin.opengl.airhockey2.AirHockeyActivity2;
 import com.martin.opengl.base.AppTitleBaseFragmentActivity;
+import com.martin.opengl.vpn.ToyVpnClient;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -81,7 +83,15 @@ public class MainActivity extends AppTitleBaseFragmentActivity {
         bean.description = "调整屏幕比率";
         bean.clz = AirHockeyActivityOrtho.class;
         list.add(bean);
+
+
+        bean = new MainActivityBean();
+        bean.title = "Vpn Connect";
+        bean.description = "vpn 连接";
+        bean.clz = ToyVpnClient.class;
+        list.add(bean);
         return list;
 
     }
+
 }
